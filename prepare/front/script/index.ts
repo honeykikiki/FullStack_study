@@ -1,23 +1,30 @@
-import axios, { AxiosResponse } from 'axios';
-
-const BASE_URL = 'http://localhost:8000/';
+const BASE_URL = 'http://localhost:8000';
 
 const $ = (selecter: string): HTMLElement | null =>
   document.querySelector(selecter);
 
-($('#form') as HTMLFormElement).addEventListener('submit', (e: Event) => {
+($('#form') as HTMLFormElement).addEventListener('submit', async (e: Event) => {
   e.preventDefault();
 
-  const name = ($('#name') as HTMLInputElement).value;
-  const temperature = ($('#temperature') as HTMLInputElement).value;
+  const name: string = ($('#name') as HTMLInputElement).value;
+  const temperature: string = ($('#temperature') as HTMLInputElement).value;
 
-  const formData = new FormData();
+  const formData: FormData = new FormData();
   formData.append('name', name);
   formData.append('temperature', temperature);
 
   if (name && temperature) {
-    const result = axios
-      .post(`${BASE_URL}`, formData)
+    console.log(name);
+    console.log(temperature);
+    await fetch(`${BASE_URL}/join`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        // 'Content-Type': 'multipart/form-data',
+      },
+      body: JSON.stringify({ name, temperature }),
+      // body: { name, temperature },
+    })
       .then((res) => {
         console.log(res);
         return res;
@@ -27,3 +34,18 @@ const $ = (selecter: string): HTMLElement | null =>
       });
   }
 });
+
+const data = async () => {
+  const data = await fetch(`${BASE_URL}/`)
+    .then((res) => {
+      console.log(res);
+      return res.json();
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  console.log(data, 'data');
+};
+
+data();

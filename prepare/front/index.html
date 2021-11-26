@@ -11,32 +11,32 @@
   <body>
     <div id="wrap">
       <div id="logo">
-        <img src="/img/logo.png" alt="logo" />
+        <img src="./public/img/logo.png" alt="logo" />
       </div>
 
       <div id="animation">
-        <img src="/img/snow40.png" alt="snow" />
-        <img src="/img/snow39.png" alt="snow" />
-        <img src="/img/snow36.png" alt="snow" />
-        <img src="/img/snow35.png" alt="snow" />
-        <img src="/img/snow34.png" alt="snow" />
-        <img src="/img/snow33.png" alt="snow" />
-        <img src="/img/snow30.png" alt="snow" />
-        <img src="/img/snow29.png" alt="snow" />
-        <img src="/img/snow28.png" alt="snow" />
-        <img src="/img/snow26.png" alt="snow" />
-        <img src="/img/snow23.png" alt="snow" />
-        <img src="/img/snow22.png" alt="snow" />
-        <img src="/img/snow21.png" alt="snow" />
-        <img src="/img/snow20.png" alt="snow" />
-        <img src="/img/snow19.png" alt="snow" />
-        <img src="/img/snow18.png" alt="snow" />
-        <img src="/img/snow16.png" alt="snow" />
-        <img src="/img/snow15.png" alt="snow" />
+        <img src="./public/img/snow40.png" alt="snow" />
+        <img src="./public/img/snow39.png" alt="snow" />
+        <img src="./public/img/snow36.png" alt="snow" />
+        <img src="./public/img/snow35.png" alt="snow" />
+        <img src="./public/img/snow34.png" alt="snow" />
+        <img src="./public/img/snow33.png" alt="snow" />
+        <img src="./public/img/snow30.png" alt="snow" />
+        <img src="./public/img/snow29.png" alt="snow" />
+        <img src="./public/img/snow28.png" alt="snow" />
+        <img src="./public/img/snow26.png" alt="snow" />
+        <img src="./public/img/snow23.png" alt="snow" />
+        <img src="./public/img/snow22.png" alt="snow" />
+        <img src="./public/img/snow21.png" alt="snow" />
+        <img src="./public/img/snow20.png" alt="snow" />
+        <img src="./public/img/snow19.png" alt="snow" />
+        <img src="./public/img/snow18.png" alt="snow" />
+        <img src="./public/img/snow16.png" alt="snow" />
+        <img src="./public/img/snow15.png" alt="snow" />
       </div>
 
       <div id="back">
-        <img src="/img/back.png" alt="background-image" />
+        <img src="./public/img/back.png" alt="background-image" />
       </div>
 
       <form action="" id="form">
@@ -50,12 +50,53 @@
           id="temperature"
           name="temperature"
           type="number"
+          step="0.1"
           placeholder="체온을 입력홰주세요"
         />
         <button>등록하기</button>
       </form>
     </div>
-
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      const BASE_URL = 'http://localhost:8000';
+      const $ = (selecter) => document.querySelector(selecter);
+      $('#form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = $('#name').value;
+        const temperature = $('#temperature').value;
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('temperature', temperature);
+        if (name && temperature) {
+          axios
+            .post(`${BASE_URL}/join`, { name, temperature })
+            .then((res) => {
+              console.log(res);
+              if (res.data.result === 'not') {
+                alert(res.data.data);
+              }
+              $('#name').value = '';
+              $('#temperature').value = '';
+              return res;
+            })
+            .catch((err) => {
+              console.error(err);
+            });
+        }
+      });
+      const data = async () => {
+        return await axios
+          .get(`${BASE_URL}/`)
+          .then((res) => {
+            console.log(res);
+            return res;
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+      };
+      data();
+    </script> -->
     <script src="./script/index.js"></script>
   </body>
 </html>
