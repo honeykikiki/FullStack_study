@@ -1,7 +1,9 @@
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const expressSession = require('express-session');
+const session = require('express-session');
+
+const cors = require('cors');
 
 const { sequelize } = require('./models');
 const indexRouter = require('./routes');
@@ -22,7 +24,16 @@ sequelize
 
 app.use(morgan('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
+
+app.use(
+  cors({
+    origin: 'http://127.0.0.1:5500',
+    credentials: true,
+  }),
+);
 
 app.use('/', indexRouter);
 
@@ -36,7 +47,7 @@ app.use((err, req, res, next) => {
   res.locals.message = err.message;
   res.locals.error = process.env.NODE_ENV !== 'production' ? err : {};
   res.status(err.status || 500);
-  res.render('error');
+  console.log(err);
 });
 
 app.listen(app.get('port'), () => {
