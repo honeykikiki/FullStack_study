@@ -1,3 +1,7 @@
+interface nameInterface {
+  name: string;
+}
+
 const BASE_URL = 'http://localhost:8000';
 
 const $ = (selecter: string): HTMLElement | null =>
@@ -27,7 +31,7 @@ const $ = (selecter: string): HTMLElement | null =>
     })
       .then((res) => {
         console.log(res);
-        return res;
+        return res.json();
       })
       .catch((err) => {
         console.error(err);
@@ -46,6 +50,18 @@ const data = async () => {
     });
 
   console.log(data, 'data');
+
+  ($('#root') as HTMLDivElement).innerHTML = data.map((v: { name: string }) => {
+    return `<div>${v.name}</div>`;
+  });
 };
 
 data();
+
+let result: string[] = ['축구', '농구', '족구', '배구'];
+
+($('#root') as HTMLDivElement).innerHTML = result
+  .map((v) => {
+    return `<div>${v}</div>`;
+  })
+  .join('');

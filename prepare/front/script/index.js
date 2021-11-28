@@ -31,7 +31,7 @@ $('#form').addEventListener('submit', (e) => __awaiter(void 0, void 0, void 0, f
         })
             .then((res) => {
             console.log(res);
-            return res;
+            return res.json();
         })
             .catch((err) => {
             console.error(err);
@@ -48,5 +48,14 @@ const data = () => __awaiter(void 0, void 0, void 0, function* () {
         console.error(err);
     });
     console.log(data, 'data');
+    $('#root').innerHTML = data.map((v) => {
+        return `<div>${v.name}</div>`;
+    });
 });
 data();
+let result = ['축구', '농구', '족구', '배구'];
+$('#root').innerHTML = result
+    .map((v) => {
+    return `<div>${v}</div>`;
+})
+    .join('');

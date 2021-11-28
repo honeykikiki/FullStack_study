@@ -137,125 +137,136 @@
 #wrap #animation img:nth-child(1) {
   left: 1.1%;
   z-index: 10;
-  -webkit-animation-delay: 7s, 2s;
-          animation-delay: 7s, 2s;
+  -webkit-animation-delay: 3s, 3s;
+          animation-delay: 3s, 3s;
 }
 
 #wrap #animation img:nth-child(2) {
-  left: 8.2%;
+  left: 2.2%;
   z-index: 10;
-  -webkit-animation-delay: 1s, 1s;
-          animation-delay: 1s, 1s;
+  -webkit-animation-delay: 9s, 6s;
+          animation-delay: 9s, 6s;
 }
 
 #wrap #animation img:nth-child(3) {
-  left: 6.3%;
+  left: 12.3%;
   z-index: 10;
-  -webkit-animation-delay: 5s, 5s;
-          animation-delay: 5s, 5s;
+  -webkit-animation-delay: 5s, 2s;
+          animation-delay: 5s, 2s;
 }
 
 #wrap #animation img:nth-child(4) {
-  left: 8.4%;
+  left: 12.4%;
   z-index: 10;
-  -webkit-animation-delay: 10s, 3s;
-          animation-delay: 10s, 3s;
+  -webkit-animation-delay: 6s, 5s;
+          animation-delay: 6s, 5s;
 }
 
 #wrap #animation img:nth-child(5) {
-  left: 20.5%;
+  left: 10.5%;
   z-index: 10;
-  -webkit-animation-delay: 7s, 1s;
-          animation-delay: 7s, 1s;
+  -webkit-animation-delay: 10s, 4s;
+          animation-delay: 10s, 4s;
 }
 
 #wrap #animation img:nth-child(6) {
-  left: 30.6%;
+  left: 6.6%;
   z-index: 10;
-  -webkit-animation-delay: 10s, 1s;
-          animation-delay: 10s, 1s;
+  -webkit-animation-delay: 2s, 3s;
+          animation-delay: 2s, 3s;
 }
 
 #wrap #animation img:nth-child(7) {
   left: 14.7%;
   z-index: 10;
-  -webkit-animation-delay: 3s, 6s;
-          animation-delay: 3s, 6s;
+  -webkit-animation-delay: 7s, 1s;
+          animation-delay: 7s, 1s;
 }
 
 #wrap #animation img:nth-child(8) {
-  left: 8.8%;
+  left: 16.8%;
   z-index: 10;
-  -webkit-animation-delay: 8s, 3s;
-          animation-delay: 8s, 3s;
+  -webkit-animation-delay: 2s, 3s;
+          animation-delay: 2s, 3s;
 }
 
 #wrap #animation img:nth-child(9) {
-  left: 45.9%;
+  left: 9.9%;
   z-index: 10;
-  -webkit-animation-delay: 10s, 5s;
-          animation-delay: 10s, 5s;
+  -webkit-animation-delay: 10s, 3s;
+          animation-delay: 10s, 3s;
 }
 
 #wrap #animation img:nth-child(10) {
-  left: 21%;
+  left: 51%;
   z-index: 10;
-  -webkit-animation-delay: 7s, 3s;
-          animation-delay: 7s, 3s;
+  -webkit-animation-delay: 3s, 2s;
+          animation-delay: 3s, 2s;
 }
 
 #wrap #animation img:nth-child(11) {
-  left: 12.1%;
+  left: 56.1%;
   z-index: 10;
-  -webkit-animation-delay: 4s, 4s;
-          animation-delay: 4s, 4s;
+  -webkit-animation-delay: 3s, 2s;
+          animation-delay: 3s, 2s;
 }
 
 #wrap #animation img:nth-child(12) {
-  left: 49.2%;
+  left: 13.2%;
   z-index: 10;
-  -webkit-animation-delay: 7s, 2s;
-          animation-delay: 7s, 2s;
+  -webkit-animation-delay: 3s, 4s;
+          animation-delay: 3s, 4s;
 }
 
 #wrap #animation img:nth-child(13) {
-  left: 27.3%;
+  left: 40.3%;
   z-index: 10;
-  -webkit-animation-delay: 7s, 4s;
-          animation-delay: 7s, 4s;
+  -webkit-animation-delay: 4s, 2s;
+          animation-delay: 4s, 2s;
 }
 
 #wrap #animation img:nth-child(14) {
-  left: 57.4%;
+  left: 43.4%;
   z-index: 10;
-  -webkit-animation-delay: 2s, 1s;
-          animation-delay: 2s, 1s;
+  -webkit-animation-delay: 2s, 6s;
+          animation-delay: 2s, 6s;
 }
 
 #wrap #animation img:nth-child(15) {
-  left: 61.5%;
+  left: 16.5%;
   z-index: 10;
-  -webkit-animation-delay: 2s, 2s;
-          animation-delay: 2s, 2s;
+  -webkit-animation-delay: 2s, 3s;
+          animation-delay: 2s, 3s;
 }
 
 #wrap #animation img:nth-child(16) {
-  left: 81.6%;
+  left: 33.6%;
   z-index: 10;
-  -webkit-animation-delay: 5s, 1s;
-          animation-delay: 5s, 1s;
+  -webkit-animation-delay: 3s, 5s;
+          animation-delay: 3s, 5s;
 }
 
 #wrap #animation img:nth-child(17) {
-  left: 69.7%;
+  left: 52.7%;
   z-index: 10;
-  -webkit-animation-delay: 8s, 3s;
-          animation-delay: 8s, 3s;
+  -webkit-animation-delay: 5s, 5s;
+          animation-delay: 5s, 5s;
 }
 
 #wrap #animation img:nth-child(18) {
-  left: 55.8%;
+  left: 91.8%;
   z-index: 10;
-  -webkit-animation-delay: 6s, 3s;
-          animation-delay: 6s, 3s;
+  -webkit-animation-delay: 7s, 6s;
+          animation-delay: 7s, 6s;
+}
+
+#wrap #root {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  background-color: #408b34;
+  color: white;
+  padding: 20px;
 }
