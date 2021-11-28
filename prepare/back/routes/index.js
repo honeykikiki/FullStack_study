@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
   const user = await User.findAll({
-    attributes: ['name'],
+    // attributes: ['name', 'temperature', 'createdAt'],
   });
   res.status(201).send(user);
 });

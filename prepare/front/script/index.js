@@ -36,6 +36,7 @@ $('#form').addEventListener('submit', (e) => __awaiter(void 0, void 0, void 0, f
             .catch((err) => {
             console.error(err);
         });
+        data();
     }
 }));
 const data = () => __awaiter(void 0, void 0, void 0, function* () {
@@ -48,14 +49,28 @@ const data = () => __awaiter(void 0, void 0, void 0, function* () {
         console.error(err);
     });
     console.log(data, 'data');
-    $('#root').innerHTML = data.map((v) => {
-        return `<div>${v.name}</div>`;
-    });
+    $('#root').innerHTML = data
+        .map((v, index) => {
+        return `<li data-list-id="${index}">
+      ${v.name} 
+      <button type="clic" class="update">수정</button>
+      <button class="delete">삭제</button>
+      </li>
+      `;
+    })
+        .join('');
 });
 data();
-let result = ['축구', '농구', '족구', '배구'];
-$('#root').innerHTML = result
-    .map((v) => {
-    return `<div>${v}</div>`;
-})
-    .join('');
+$('#root').addEventListener('click', (e) => __awaiter(void 0, void 0, void 0, function* () {
+    e.preventDefault();
+    const target = e.target;
+    if (target.classList.contains('update')) {
+        console.log(target.closest('li').dataset.listId);
+        const listId = target.closest('li').dataset.listId;
+        yield fetch(`${BASE_URL}/update`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            // body: {},
+        });
+    }
+}));
