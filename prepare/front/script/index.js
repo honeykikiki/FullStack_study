@@ -20,7 +20,7 @@ $('#form').addEventListener('submit', (e) => __awaiter(void 0, void 0, void 0, f
     if (name && temperature) {
         console.log(name);
         console.log(temperature);
-        yield fetch(`${BASE_URL}/join`, {
+        const join = yield fetch(`${BASE_URL}/join`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -30,12 +30,12 @@ $('#form').addEventListener('submit', (e) => __awaiter(void 0, void 0, void 0, f
             // body: { name, temperature },
         })
             .then((res) => {
-            console.log(res);
             return res.json();
         })
             .catch((err) => {
             console.error(err);
         });
+        console.log(join, 'join');
         data();
     }
 }));
@@ -65,9 +65,9 @@ $('#root').addEventListener('click', (e) => __awaiter(void 0, void 0, void 0, fu
     e.preventDefault();
     // const target = e.target as HTMLLIElement;
     const target = e.target;
+    const nameId = target.closest('li').dataset.listId;
     if (target.classList.contains('update')) {
         target.value = 'ss';
-        const nameId = target.closest('li').dataset.listId;
         // const nameId = target.closest('li')!.innerText.split(' ').slice(0, 1);
         const updateName = prompt('수정할 이름을 입력해주세요');
         console.log(nameId);
@@ -84,6 +84,19 @@ $('#root').addEventListener('click', (e) => __awaiter(void 0, void 0, void 0, fu
                 console.error(err);
             });
         }
+    }
+    if (target.classList.contains('delete')) {
+        yield fetch(`${BASE_URL}/destory`, {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ nameId }),
+        })
+            .then((res) => {
+            return res.json();
+        })
+            .catch((err) => {
+            console.error(err);
+        });
     }
     data();
 }));
