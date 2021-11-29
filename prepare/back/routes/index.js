@@ -28,4 +28,29 @@ router.post('/join', async (req, res) => {
   res.status(201).send(user);
 });
 
+router.put('/update', async (req, res) => {
+  const user = await User.findOne({
+    where: { id: req.body.nameId },
+  });
+
+  console.log(user, 'user');
+  if (!user) {
+    return res.send({ result: 'notExist', data: '아이디가 없습니다' });
+  }
+
+  if (user.name === req.body.updateName) {
+    return res.send({
+      result: 'notExist',
+      data: '바꾸려는 이름과 이전 같습니다.',
+    });
+  }
+  await user.update(
+    {
+      name: req.body.updateName,
+    },
+    { where: { id: req.body.nameId } },
+  );
+  res.status(201).send({ result: 'ok' });
+});
+
 module.exports = router;
