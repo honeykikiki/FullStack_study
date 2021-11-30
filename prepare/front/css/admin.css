@@ -8,9 +8,7 @@ ol {
   list-style: none;
 }
 
-#wrap {
-  width: 100vw;
-  height: 100vh;
+body {
   background-color: #941f1f;
 }
 
@@ -32,6 +30,7 @@ ol {
   top: 30%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
+  padding-bottom: 200px;
 }
 
 #wrap #wrap-list #content {

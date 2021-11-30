@@ -7,6 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var _a;
 import { $ } from './utils/dom.js';
 import { BASE_URL } from './utils/api.js';
 const render = () => __awaiter(void 0, void 0, void 0, function* () {
@@ -54,7 +55,7 @@ $('#form').addEventListener('submit', (e) => __awaiter(void 0, void 0, void 0, f
     $('#name').value = '';
     render();
 }));
-$('#root').addEventListener('click', (e) => __awaiter(void 0, void 0, void 0, function* () {
+(_a = $('#root')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', (e) => __awaiter(void 0, void 0, void 0, function* () {
     e.preventDefault();
     // const target = e.target as HTMLLIElement;
     const target = e.target;
