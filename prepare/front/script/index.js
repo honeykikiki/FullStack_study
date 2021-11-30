@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -8,9 +7,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const BASE_URL = 'http://localhost:8000';
-const $ = (selecter) => document.querySelector(selecter);
-const data = () => __awaiter(void 0, void 0, void 0, function* () {
+import { $ } from './utils/dom.js';
+import { BASE_URL } from './utils/api.js';
+const render = () => __awaiter(void 0, void 0, void 0, function* () {
     const data = yield fetch(`${BASE_URL}/`)
         .then((res) => {
         return res.json();
@@ -29,7 +28,7 @@ const data = () => __awaiter(void 0, void 0, void 0, function* () {
     })
         .join('');
 });
-data();
+render();
 $('#form').addEventListener('submit', (e) => __awaiter(void 0, void 0, void 0, function* () {
     e.preventDefault();
     const name = $('#name').value;
@@ -53,7 +52,7 @@ $('#form').addEventListener('submit', (e) => __awaiter(void 0, void 0, void 0, f
         console.log(join, 'join');
     }
     $('#name').value = '';
-    data();
+    render();
 }));
 $('#root').addEventListener('click', (e) => __awaiter(void 0, void 0, void 0, function* () {
     e.preventDefault();
@@ -92,5 +91,5 @@ $('#root').addEventListener('click', (e) => __awaiter(void 0, void 0, void 0, fu
             console.error(err);
         });
     }
-    data();
+    render();
 }));

@@ -139,129 +139,129 @@
 }
 
 #wrap #animation img:nth-child(1) {
-  left: 5.1%;
+  left: 1.1%;
   z-index: 10;
-  -webkit-animation-delay: 9s, 3s;
-          animation-delay: 9s, 3s;
+  -webkit-animation-delay: 3s, 5s;
+          animation-delay: 3s, 5s;
 }
 
 #wrap #animation img:nth-child(2) {
-  left: 2.2%;
+  left: 10.2%;
   z-index: 10;
-  -webkit-animation-delay: 2s, 3s;
-          animation-delay: 2s, 3s;
+  -webkit-animation-delay: 5s, 2s;
+          animation-delay: 5s, 2s;
 }
 
 #wrap #animation img:nth-child(3) {
-  left: 3.3%;
+  left: 12.3%;
   z-index: 10;
-  -webkit-animation-delay: 9s, 3s;
-          animation-delay: 9s, 3s;
+  -webkit-animation-delay: 5s, 5s;
+          animation-delay: 5s, 5s;
 }
 
 #wrap #animation img:nth-child(4) {
-  left: 20.4%;
+  left: 12.4%;
   z-index: 10;
-  -webkit-animation-delay: 2s, 6s;
-          animation-delay: 2s, 6s;
+  -webkit-animation-delay: 4s, 5s;
+          animation-delay: 4s, 5s;
 }
 
 #wrap #animation img:nth-child(5) {
-  left: 25.5%;
+  left: 15.5%;
   z-index: 10;
-  -webkit-animation-delay: 8s, 2s;
-          animation-delay: 8s, 2s;
+  -webkit-animation-delay: 8s, 5s;
+          animation-delay: 8s, 5s;
 }
 
 #wrap #animation img:nth-child(6) {
-  left: 12.6%;
+  left: 6.6%;
   z-index: 10;
-  -webkit-animation-delay: 3s, 6s;
-          animation-delay: 3s, 6s;
+  -webkit-animation-delay: 8s, 3s;
+          animation-delay: 8s, 3s;
 }
 
 #wrap #animation img:nth-child(7) {
-  left: 21.7%;
+  left: 14.7%;
   z-index: 10;
-  -webkit-animation-delay: 7s, 3s;
-          animation-delay: 7s, 3s;
+  -webkit-animation-delay: 3s, 4s;
+          animation-delay: 3s, 4s;
 }
 
 #wrap #animation img:nth-child(8) {
-  left: 32.8%;
+  left: 40.8%;
   z-index: 10;
-  -webkit-animation-delay: 9s, 2s;
-          animation-delay: 9s, 2s;
+  -webkit-animation-delay: 5s, 5s;
+          animation-delay: 5s, 5s;
 }
 
 #wrap #animation img:nth-child(9) {
   left: 18.9%;
   z-index: 10;
+  -webkit-animation-delay: 9s, 1s;
+          animation-delay: 9s, 1s;
+}
+
+#wrap #animation img:nth-child(10) {
+  left: 51%;
+  z-index: 10;
+  -webkit-animation-delay: 3s, 6s;
+          animation-delay: 3s, 6s;
+}
+
+#wrap #animation img:nth-child(11) {
+  left: 34.1%;
+  z-index: 10;
   -webkit-animation-delay: 2s, 2s;
           animation-delay: 2s, 2s;
 }
 
-#wrap #animation img:nth-child(10) {
-  left: 31%;
-  z-index: 10;
-  -webkit-animation-delay: 3s, 2s;
-          animation-delay: 3s, 2s;
-}
-
-#wrap #animation img:nth-child(11) {
-  left: 12.1%;
-  z-index: 10;
-  -webkit-animation-delay: 4s, 2s;
-          animation-delay: 4s, 2s;
-}
-
 #wrap #animation img:nth-child(12) {
-  left: 61.2%;
+  left: 13.2%;
   z-index: 10;
-  -webkit-animation-delay: 2s, 6s;
-          animation-delay: 2s, 6s;
+  -webkit-animation-delay: 10s, 6s;
+          animation-delay: 10s, 6s;
 }
 
 #wrap #animation img:nth-child(13) {
-  left: 53.3%;
+  left: 27.3%;
   z-index: 10;
-  -webkit-animation-delay: 2s, 1s;
-          animation-delay: 2s, 1s;
+  -webkit-animation-delay: 10s, 3s;
+          animation-delay: 10s, 3s;
 }
 
 #wrap #animation img:nth-child(14) {
   left: 57.4%;
   z-index: 10;
-  -webkit-animation-delay: 8s, 6s;
-          animation-delay: 8s, 6s;
+  -webkit-animation-delay: 1s, 1s;
+          animation-delay: 1s, 1s;
 }
 
 #wrap #animation img:nth-child(15) {
-  left: 61.5%;
+  left: 76.5%;
   z-index: 10;
-  -webkit-animation-delay: 8s, 2s;
-          animation-delay: 8s, 2s;
+  -webkit-animation-delay: 4s, 5s;
+          animation-delay: 4s, 5s;
 }
 
 #wrap #animation img:nth-child(16) {
-  left: 81.6%;
+  left: 17.6%;
   z-index: 10;
-  -webkit-animation-delay: 1s, 2s;
-          animation-delay: 1s, 2s;
+  -webkit-animation-delay: 10s, 1s;
+          animation-delay: 10s, 1s;
 }
 
 #wrap #animation img:nth-child(17) {
-  left: 69.7%;
+  left: 52.7%;
   z-index: 10;
-  -webkit-animation-delay: 8s, 6s;
-          animation-delay: 8s, 6s;
+  -webkit-animation-delay: 7s, 1s;
+          animation-delay: 7s, 1s;
 }
 
 #wrap #animation img:nth-child(18) {
-  left: 19.8%;
+  left: 55.8%;
   z-index: 10;
-  -webkit-animation-delay: 10s, 6s;
-          animation-delay: 10s, 6s;
+  -webkit-animation-delay: 8s, 2s;
+          animation-delay: 8s, 2s;
 }
 
 #wrap #root {

@@ -1,16 +1,9 @@
-interface nameInterface {
-  name: string;
-  temperature: string;
-  createdAt: string;
-  id: number;
-}
+import { $ } from './utils/dom.js';
+import { BASE_URL } from './utils/api.js';
 
-const BASE_URL = 'http://localhost:8000';
+import { dataInterface as nameInterface } from './types/type';
 
-const $ = (selecter: string): HTMLElement | null =>
-  document.querySelector(selecter);
-
-const data = async () => {
+const render = async () => {
   const data = await fetch(`${BASE_URL}/`)
     .then((res) => {
       return res.json();
@@ -31,7 +24,7 @@ const data = async () => {
     .join('');
 };
 
-data();
+render();
 
 ($('#form') as HTMLFormElement).addEventListener('submit', async (e: Event) => {
   e.preventDefault();
@@ -59,7 +52,7 @@ data();
   }
 
   ($('#name') as HTMLInputElement).value = '';
-  data();
+  render();
 });
 
 ($('#root') as HTMLButtonElement).addEventListener(
@@ -103,6 +96,6 @@ data();
         });
     }
 
-    data();
+    render();
   },
 );
